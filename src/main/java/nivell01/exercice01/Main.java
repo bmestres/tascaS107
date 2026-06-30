@@ -11,6 +11,5 @@ public class Main {
 
         System.out.format("%.2f €\n", worker1.computeSalary(135));
         System.out.format("%.2f €\n", worker2.computeSalary(180.5));
-
     }
 }
