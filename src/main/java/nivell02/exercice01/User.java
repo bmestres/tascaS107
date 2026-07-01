@@ -1,6 +1,9 @@
 package nivell02.exercice01;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class User {
+    @JsonProperty
     private int id;
     private String name;
 
