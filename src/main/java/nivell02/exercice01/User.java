@@ -3,8 +3,9 @@ package nivell02.exercice01;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class User {
-    @JsonProperty
+    @JsonProperty("id")
     private int id;
+    @JsonProperty("name")
     private String name;
 
 public void setId(int id){
@@ -19,5 +20,4 @@ public int getId(){
 public String getName(){
     return this.name;
 }
-
 }
