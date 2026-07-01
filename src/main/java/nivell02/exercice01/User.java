@@ -31,4 +31,5 @@ public class User {
     public String toString() {
         return String.format("User Info:\nId: %d\nName: %s\n", this.id, this.name);
     }
+
 }
