@@ -1,23 +1,23 @@
 package nivell02.exercice01;
 
 
-import tools.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.exc.StreamWriteException;
+import com.fasterxml.jackson.databind.DatabindException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
+import java.io.IOException;
 
 public class SerializationToJSON {
 
-    private final String filePath;
-    private Object o;
-
-    public SerializationToJSON(String filePath, Object o){
-        this.filePath = filePath;
-        this.o = o;
+    public static void serializeUser(String filePath, User user) throws IOException{
+        File file = new File(filePath);
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.writeValue(file, user);
     }
 
-    public void serialize(){
-        File file = new File(this.filePath);
+    public static Object deserializeUser(String filePath) throws IOException{
         ObjectMapper mapper = new ObjectMapper();
-        mapper.writeValue(file, this.o);
+        return mapper.readValue(new File(filePath), User.class);
     }
 }

@@ -1,23 +1,34 @@
 package nivell02.exercice01;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class User {
-    @JsonProperty("id")
+
     private int id;
-    @JsonProperty("name")
+
     private String name;
 
-public void setId(int id){
-    this.id = id;
-}
-public void setName(String name){
-    this.name = name;
-}
-public int getId(){
-    return this.id;
-}
-public String getName(){
-    return this.name;
-}
+    public User(){
+        this.id = -1;
+        this.name = "";
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("User Info:\nId: %d\nName: %s\n", this.id, this.name);
+    }
 }
