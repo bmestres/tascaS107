@@ -1,6 +1,6 @@
 package nivell01.exercice02;
 
-public class OnlineWorker extends Worker{
+public class OnlineWorker extends Worker {
 
     private static final double INTERNET_FLAT_FEE = 59.5;
 
@@ -14,7 +14,7 @@ public class OnlineWorker extends Worker{
     }
 
     @Deprecated
-    public static double computeYearInternet(){
-        return INTERNET_FLAT_FEE*12;
+    public static double computeYearInternet() {
+        return INTERNET_FLAT_FEE * 12;
     }
 }

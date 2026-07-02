@@ -2,7 +2,7 @@ package nivell01.exercice01;
 
 public class Main {
 
-    public static void main(String[]args){
+    public static void main(String[] args) {
 
         OnSiteWorker.setPetrol(200.25);
 

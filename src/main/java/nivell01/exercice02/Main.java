@@ -2,6 +2,7 @@ package nivell01.exercice02;
 
 @SuppressWarnings("deprecation")
 public class Main {
+
     public static void main(String[] args) {
 
         OnSiteWorker.setPetrol(0.84);

@@ -10,7 +10,8 @@ public class Worker {
         this.surname = surname;
         this.pricePerHour = pricePerHour;
     }
-    public double computeSalary(double hoursWorked){
-        return this.pricePerHour*hoursWorked;
+
+    public double computeSalary(double hoursWorked) {
+        return this.pricePerHour * hoursWorked;
     }
 }

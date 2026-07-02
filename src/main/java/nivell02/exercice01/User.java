@@ -6,7 +6,7 @@ public class User {
 
     private String name;
 
-    public User(){
+    public User() {
         this.id = -1;
         this.name = "";
     }
@@ -31,5 +31,4 @@ public class User {
     public String toString() {
         return String.format("User Info:\nId: %d\nName: %s\n", this.id, this.name);
     }
-
 }
