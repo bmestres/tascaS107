@@ -19,14 +19,6 @@ public class User {
         this.name = name;
     }
 
-    public int getId() {
-        return this.id;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
     @Override
     public String toString() {
         return String.format("User Info:\nId: %d\nName: %s\n", this.id, this.name);

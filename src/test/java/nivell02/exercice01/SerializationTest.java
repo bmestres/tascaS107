@@ -5,13 +5,6 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
-
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
 
 public class SerializationTest {
 // Check that the content of the unserialized and the serialized/deserialized User instances is equal
@@ -29,4 +22,4 @@ public class SerializationTest {
             assertThat(user).usingRecursiveComparison().isEqualTo(deserializedUser);
         }
     }
-}
+

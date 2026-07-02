@@ -12,5 +12,17 @@ public abstract class Worker {
         this.pricePerHour = pricePerHour;
     }
 
-    public double abstract computeSalary(double hoursWorked);
+    public String getName(){
+        return this.name;
+    }
+
+    public String getSurname(){
+        return this.surname;
+    }
+
+    public double getPricePerHour(){
+        return this.pricePerHour;
+    }
+
+    public abstract double computeSalary(double hoursWorked);
 }

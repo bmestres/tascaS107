@@ -14,6 +14,6 @@ public class OnSiteWorker extends Worker {
 
     @Override
     public double computeSalary(double hoursWorked) {
-        return super.computeSalary(hoursWorked) + petrol;
+        return getPricePerHour() * hoursWorked + petrol;
     }
 }

@@ -1,9 +1,10 @@
 package nivell01.exercice02;
 
-public class Worker {
-    String name;
-    String surname;
-    double pricePerHour;
+public abstract class Worker {
+
+    private final String name;
+    private final String surname;
+    private double pricePerHour;
 
     public Worker(String name, String surname, double pricePerHour) {
         this.name = name;
@@ -11,7 +12,17 @@ public class Worker {
         this.pricePerHour = pricePerHour;
     }
 
-    public double computeSalary(double hoursWorked) {
-        return this.pricePerHour * hoursWorked;
+    public String getName(){
+        return this.name;
     }
+
+    public String getSurname(){
+        return this.surname;
+    }
+
+    public double getPricePerHour(){
+        return this.pricePerHour;
+    }
+
+    public abstract double computeSalary(double hoursWorked);
 }
