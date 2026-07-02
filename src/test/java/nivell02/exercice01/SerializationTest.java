@@ -16,21 +16,17 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class SerializationTest {
 // Check that the content of the unserialized and the serialized/deserialized User instances is equal
     @Test
-    void inputObjectIsSameAsSerializedObject(){
+    void inputObjectIsSameAsSerializedObject() throws IOException {
 
         User user = new User();
         user.setId(314);
         user.setName("Joseph");
 
-        try{
             SerializationToJSON.serializeUser("src/main/resources/user.json", user);
             User deserializedUser = (User)SerializationToJSON.deserializeUser("src/main/resources/user.json");
             System.out.println(deserializedUser);
 
             assertThat(user).usingRecursiveComparison().isEqualTo(deserializedUser);
-
-        }catch(IOException e){
-            System.out.println("Not able to serialize");
         }
     }
 }

@@ -2,9 +2,9 @@ package nivell01.exercice01;
 
 public abstract class Worker {
 
-    String name;
-    String surname;
-    double pricePerHour;
+    private final String name;
+    private final String surname;
+    private double pricePerHour;
 
     public Worker(String name, String surname, double pricePerHour) {
         this.name = name;
@@ -12,7 +12,5 @@ public abstract class Worker {
         this.pricePerHour = pricePerHour;
     }
 
-    public double computeSalary(double hoursWorked) {
-        return this.pricePerHour * hoursWorked;
-    }
+    public double abstract computeSalary(double hoursWorked);
 }

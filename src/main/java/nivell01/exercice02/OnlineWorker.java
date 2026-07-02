@@ -10,7 +10,7 @@ public class OnlineWorker extends Worker {
 
     @Override
     public double computeSalary(double hoursWorked) {
-        return super.computeSalary(hoursWorked) + INTERNET_FLAT_FEE;
+        return this.pricePerHour * hoursWorked + INTERNET_FLAT_FEE;
     }
 
     @Deprecated
